@@ -1,4 +1,4 @@
-package springeighthproject.spring_jpa.domain.exception;
+package springeighthproject.spring_jpa.exception;
 
 public class NotEnoughStockException extends RuntimeException {
 

@@ -3,7 +3,7 @@ package springeighthproject.spring_jpa.domain.item;
 import lombok.Getter;
 import lombok.Setter;
 import springeighthproject.spring_jpa.domain.Category;
-import springeighthproject.spring_jpa.domain.exception.NotEnoughStockException;
+import springeighthproject.spring_jpa.exception.NotEnoughStockException;
 
 import javax.persistence.*;
 import java.util.ArrayList;

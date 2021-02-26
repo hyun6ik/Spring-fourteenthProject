@@ -1,7 +1,6 @@
 package springeighthproject.spring_jpa.service;
 
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +10,7 @@ import springeighthproject.spring_jpa.domain.Address;
 import springeighthproject.spring_jpa.domain.Member;
 import springeighthproject.spring_jpa.domain.Order;
 import springeighthproject.spring_jpa.domain.OrderStatus;
-import springeighthproject.spring_jpa.domain.exception.NotEnoughStockException;
+import springeighthproject.spring_jpa.exception.NotEnoughStockException;
 import springeighthproject.spring_jpa.domain.item.Book;
 import springeighthproject.spring_jpa.domain.item.Item;
 import springeighthproject.spring_jpa.repository.OrderRepository;
