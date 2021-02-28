@@ -1,4 +1,4 @@
-package springeighthproject.spring_jpa.repository.simplequery;
+package springeighthproject.spring_jpa.repository.order.simplequery;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;

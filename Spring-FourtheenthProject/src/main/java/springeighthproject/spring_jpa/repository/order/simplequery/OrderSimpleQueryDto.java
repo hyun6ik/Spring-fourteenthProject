@@ -1,8 +1,7 @@
-package springeighthproject.spring_jpa.repository.simplequery;
+package springeighthproject.spring_jpa.repository.order.simplequery;
 
 import lombok.Data;
 import springeighthproject.spring_jpa.domain.Address;
-import springeighthproject.spring_jpa.domain.Order;
 import springeighthproject.spring_jpa.domain.OrderStatus;
 
 import java.time.LocalDateTime;

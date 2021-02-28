@@ -11,6 +11,8 @@ import springeighthproject.spring_jpa.domain.OrderItem;
 import springeighthproject.spring_jpa.domain.OrderStatus;
 import springeighthproject.spring_jpa.repository.OrderRepository;
 import springeighthproject.spring_jpa.repository.OrderSearch;
+import springeighthproject.spring_jpa.repository.order.query.OrderQueryDto;
+import springeighthproject.spring_jpa.repository.order.query.OrderQueryRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.stream.Collectors;
 public class OrderApiController {
 
     private final OrderRepository orderRepository;
+    private final OrderQueryRepository orderQueryRepository;
 
     @GetMapping("/api/v1/orders")
     public List<Order> ordersV1(){
@@ -64,6 +67,11 @@ public class OrderApiController {
                 .map(o -> new OrderDto(o))
                 .collect(Collectors.toList());
         return collect;
+    }
+
+    @GetMapping("/api/v4/orders")
+    public List<OrderQueryDto> ordersV4(){
+        return orderQueryRepository.findOrderQueryDtos();
     }
 
 

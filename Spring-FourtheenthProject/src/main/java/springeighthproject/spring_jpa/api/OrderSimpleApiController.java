@@ -9,8 +9,8 @@ import springeighthproject.spring_jpa.domain.Order;
 import springeighthproject.spring_jpa.domain.OrderStatus;
 import springeighthproject.spring_jpa.repository.OrderRepository;
 import springeighthproject.spring_jpa.repository.OrderSearch;
-import springeighthproject.spring_jpa.repository.simplequery.OrderSimpleQueryDto;
-import springeighthproject.spring_jpa.repository.simplequery.OrderSimpleQueryRepository;
+import springeighthproject.spring_jpa.repository.order.simplequery.OrderSimpleQueryDto;
+import springeighthproject.spring_jpa.repository.order.simplequery.OrderSimpleQueryRepository;
 import springeighthproject.spring_jpa.service.OrderService;
 
 import java.time.LocalDateTime;
