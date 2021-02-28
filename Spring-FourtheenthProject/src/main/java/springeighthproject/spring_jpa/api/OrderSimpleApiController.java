@@ -9,6 +9,8 @@ import springeighthproject.spring_jpa.domain.Order;
 import springeighthproject.spring_jpa.domain.OrderStatus;
 import springeighthproject.spring_jpa.repository.OrderRepository;
 import springeighthproject.spring_jpa.repository.OrderSearch;
+import springeighthproject.spring_jpa.repository.simplequery.OrderSimpleQueryDto;
+import springeighthproject.spring_jpa.repository.simplequery.OrderSimpleQueryRepository;
 import springeighthproject.spring_jpa.service.OrderService;
 
 import java.time.LocalDateTime;
@@ -28,6 +30,7 @@ public class OrderSimpleApiController {
 
     private final OrderService orderService;
     private final OrderRepository orderRepository;
+    private final OrderSimpleQueryRepository orderSimpleQueryRepository;
 
     @GetMapping("/api/v1/simple-orders")
     public List<Order> ordersV1() {
@@ -59,6 +62,11 @@ public class OrderSimpleApiController {
                 .map(o -> new SimpleOrderDto(o))
                 .collect(Collectors.toList());
         return result;
+    }
+
+    @GetMapping("/api/v4/simple-orders")
+    public List<OrderSimpleQueryDto> ordersV4(){
+        return orderSimpleQueryRepository.findOrderDtos();
     }
 
 
